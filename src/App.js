@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+//import library
+import {Stage,Layer,Circle} from 'react-konva';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+     <button>change width</button>
+       <button>change height</button>
+       <Stage  width={window.innerWidth} height={window.innerHeight}>
+           <Layer>
+               <Circle
+                   x={100}
+                   y={100}
+                   width={100}
+                   height={100}
+                   fill="red"
+                   shadowBlur={5}
+               />
+           </Layer>
+       </Stage>
+   </>
   );
 }
 
